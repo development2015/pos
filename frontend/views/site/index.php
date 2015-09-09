@@ -182,7 +182,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                                     <div class="row static-info">
                                         <div class="col-md-8 name">
-                                            Quantity : 
+                                            Kuantiti : 
                                         </div>
                                         <div class="col-md-3 name">
                                             <?php echo $sum_quantity; ?>
@@ -190,7 +190,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     </div>
                                     <div class="row static-info">
                                         <div class="col-md-8 name">
-                                            SubTotal : 
+                                            Jumlah : 
                                         </div>
                                         <div class="col-md-3 name">
                                             RM <?php echo $sum; ?>
@@ -199,7 +199,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     </div>   
                                     <div class="row static-info">
                                         <div class="col-md-8 name">
-                                            Cash : 
+                                            Tunai : 
                                         </div>
                                         <div class="col-md-3 name">
                                              RM <span class="cash"></span>
@@ -207,7 +207,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     </div>  
                                     <div class="row static-info">
                                         <div class="col-md-8 name">
-                                            Balance : 
+                                            Baki : 
                                         </div>
                                         <div class="col-md-3 value">
                                             RM <span class="total"></span>
