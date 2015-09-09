@@ -55,7 +55,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
                             <div class="portlet-body">
                                 <div class="table-scrollable table-scrollable-borderless boxPajax">
-
+                        <?php if(Yii::$app->session->hasFlash('error')):?>
+                            <div class="alert alert-danger">
+                                <button type="button" class="close" data-dismiss="alert"></button>
+                                 <?php echo  Yii::$app->session->getFlash('error'); ?>
+                            </div>
+                        <?php endif; ?>
                                     <table class="table table-hover table-light">
                                     <thead>
                                     <tr class="uppercase">

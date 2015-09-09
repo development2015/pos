@@ -98,15 +98,23 @@ class SiteController extends Controller
         $barcode = $_POST['barcode'];
         $model = Goods::find()->where(['barcode'=>$barcode])->one();
 
-        $items = $model->items;
-        $quantity = 1;
-        $price = $model->price_unit;
+        if (empty($model->barcode)) {
+            Yii::$app->getSession()->setFlash('error', '<strong>Maaf! </strong>Data Masih Belum Wujud Di Dalam Sistem!');
+            return $this->redirect(['index']);
+        } else {
 
-        $model_goods = new GoodsTemp();
-        $model_goods->items = $items;
-        $model_goods->quantity = $quantity;
-        $model_goods->price = $price;
-        $model_goods->save();
+            $items = $model->items;
+            $quantity = 1;
+            $price = $model->price_unit;
+
+            $model_goods = new GoodsTemp();
+            $model_goods->items = $items;
+            $model_goods->quantity = $quantity;
+            $model_goods->price = $price;
+            $model_goods->save();
+        }
+
+
 
     }
 

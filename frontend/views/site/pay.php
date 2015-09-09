@@ -59,6 +59,7 @@ $(document).ready(function(){
 
         $('span.cash').html(cash);
         $('span.total').html((sum).toFixed(2));
+        $('#modal').modal('hide');
 
     }); 
 
