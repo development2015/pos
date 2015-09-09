@@ -194,6 +194,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         </div>
                                         <div class="col-md-3 name">
                                             RM <?php echo $sum; ?>
+                                            <input type="hidden" name="sum" class="sum" value="<?php echo $sum; ?>">
                                         </div>
                                     </div>   
                                     <div class="row static-info">

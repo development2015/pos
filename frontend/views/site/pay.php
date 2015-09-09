@@ -53,7 +53,7 @@ $(document).ready(function(){
     $('.proses_modal').on('click', function () {
         var numpad_modal = $(".numpad_modal").val();
         $('span.cash').html(numpad_modal);
-        //alert(numpad_modal);
+
     }); 
 
     

@@ -47,13 +47,10 @@ $(function(){
 
     });
 
-
-
     $(".plus").click(function(){
       val1 = $(this).parent().parent().parent().find('input')[0].value; 
       val2 = $(this).parent().parent().parent().find('input')[1].value; 
-      //console.log('this is val1 : '+val1);
-      //console.log('this is val2 : '+val2);
+
       
         var quantity = val1;
         var id = val2;
@@ -74,8 +71,6 @@ $(function(){
     $(".minus").click(function(){
       val1 = $(this).parent().parent().parent().find('input')[0].value; 
       val2 = $(this).parent().parent().parent().find('input')[1].value; 
-      //console.log('this is val1 : '+val1);
-      //console.log('this is val2 : '+val2);
       
         var quantity = val1;
         var id = val2;
@@ -112,12 +107,15 @@ $(function(){
     });
 
     $(".pay").click(function(){
+      var sum = $(".sum").val();
+      var dataString = 'sum='+ sum;
         $.ajax({
               type: "POST",
               url: "index.php?r=site%2Fpay",
-              success : function(html){
+              data: dataString,
+              /*success : function(html){
                   $("#modalContent").html(html);
-              }
+              }*/
         });
     });
 
