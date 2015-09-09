@@ -1,0 +1,238 @@
+2015-09-06 14:21:56 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'yii2advanced'' in C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare(true)
+#6 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#8 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#16 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#17 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#18 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\Application.php(167): yii\base\Module->runAction('migrate', Array)
+#19 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#20 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 C:\wamp\www\advanced\yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1049] Unknown database 'yii2advanced'' in C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare(true)
+#4 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#6 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#14 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#15 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#16 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\Application.php(167): yii\base\Module->runAction('migrate', Array)
+#17 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#18 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 C:\wamp\www\advanced\yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2015-09-06 14:21:54 [-][-][-][info][application] $_SERVER = [
+    '!::' => '::\\'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\user\\AppData\\Roaming'
+    'COMMONPROGRAMFILES(X86)' => 'C:\\Program Files (x86)\\Common Files'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMMONPROGRAMW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'ALIENWARE15'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GNUPGHOME' => 'c:/Users/user/.gnupg'
+    'HISTFILE' => 'c:/Users/user/.bash_history'
+    'HOME' => 'c:/Users/user'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\user'
+    'INPUTRC' => 'C:/Program Files (x86)/Git/etc/inputrc'
+    'LESS' => '-FRSX'
+    'LESSCHARSET' => 'utf-8'
+    'LOCALAPPDATA' => 'C:\\Users\\user\\AppData\\Local'
+    'LOGNAME' => 'user'
+    'LOGONSERVER' => '\\\\MicrosoftAccount'
+    'MAKE_MODE' => 'unix'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OLDPWD' => 'c:/'
+    'OS' => 'Windows_NT'
+    'PATH' => 'c:\\Users\\user\\bin;.;C:\\Program Files (x86)\\Git\\local\\bin;C:\\Program Files (x86)\\Git\\mingw\\bin;C:\\Program Files (x86)\\Git\\bin;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;c:\\Windows\\system32;c:\\Windows;c:\\Windows\\System32\\Wbem;c:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;c:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;c:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;c:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;c:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;c:\\wamp\\bin\\php\\php5.5.12;c:\\ProgramData\\ComposerSetup\\bin;c:\\WINDOWS\\system32;c:\\WINDOWS;c:\\WINDOWS\\System32\\Wbem;c:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'PROGRAMDATA' => 'C:\\ProgramData'
+    'PROGRAMFILES(X86)' => 'C:\\Program Files (x86)'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PROGRAMW6432' => 'C:\\Program Files'
+    'PSMODULEPATH' => 'C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'c:/wamp/www/advanced'
+    'SESSIONNAME' => 'Console'
+    'SHLVL' => '1'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'TEMP' => 'C:/Users/user/AppData/Local/Temp'
+    'TERM' => 'cygwin'
+    'TMP' => 'C:/Users/user/AppData/Local/Temp'
+    'USERDOMAIN' => 'ALIENWARE15'
+    'USERDOMAIN_ROAMINGPROFILE' => 'ALIENWARE15'
+    'USERNAME' => 'user'
+    'USERPROFILE' => 'C:\\Users\\user'
+    'WINDIR' => 'C:\\WINDOWS'
+    '_' => 'c:/wamp/bin/php/php5.5.12/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1441542114.3906
+    'REQUEST_TIME' => 1441542114
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2015-09-06 14:22:25 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'yii2advanced'' in C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare(true)
+#6 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#8 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#16 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#17 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#18 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\Application.php(167): yii\base\Module->runAction('migrate', Array)
+#19 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#20 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 C:\wamp\www\advanced\yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1049] Unknown database 'yii2advanced'' in C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare(true)
+#4 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#6 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\wamp\www\advanced\vendor\yiisoft\yii2\db\Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#14 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#15 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#16 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\Application.php(167): yii\base\Module->runAction('migrate', Array)
+#17 C:\wamp\www\advanced\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#18 C:\wamp\www\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 C:\wamp\www\advanced\yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2015-09-06 14:22:25 [-][-][-][info][application] $_SERVER = [
+    '!::' => '::\\'
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\user\\AppData\\Roaming'
+    'COMMONPROGRAMFILES(X86)' => 'C:\\Program Files (x86)\\Common Files'
+    'COMMONPROGRAMFILES' => 'C:\\Program Files\\Common Files'
+    'COMMONPROGRAMW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'ALIENWARE15'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'GNUPGHOME' => 'c:/Users/user/.gnupg'
+    'HISTFILE' => 'c:/Users/user/.bash_history'
+    'HOME' => 'c:/Users/user'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\user'
+    'INPUTRC' => 'C:/Program Files (x86)/Git/etc/inputrc'
+    'LESS' => '-FRSX'
+    'LESSCHARSET' => 'utf-8'
+    'LOCALAPPDATA' => 'C:\\Users\\user\\AppData\\Local'
+    'LOGNAME' => 'user'
+    'LOGONSERVER' => '\\\\MicrosoftAccount'
+    'MAKE_MODE' => 'unix'
+    'MSYSTEM' => 'MINGW32'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OLDPWD' => 'c:/'
+    'OS' => 'Windows_NT'
+    'PATH' => 'c:\\Users\\user\\bin;.;C:\\Program Files (x86)\\Git\\local\\bin;C:\\Program Files (x86)\\Git\\mingw\\bin;C:\\Program Files (x86)\\Git\\bin;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;c:\\Windows\\system32;c:\\Windows;c:\\Windows\\System32\\Wbem;c:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;c:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;c:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;c:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;c:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;c:\\wamp\\bin\\php\\php5.5.12;c:\\ProgramData\\ComposerSetup\\bin;c:\\WINDOWS\\system32;c:\\WINDOWS;c:\\WINDOWS\\System32\\Wbem;c:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PLINK_PROTOCOL' => 'ssh'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'PROGRAMDATA' => 'C:\\ProgramData'
+    'PROGRAMFILES(X86)' => 'C:\\Program Files (x86)'
+    'PROGRAMFILES' => 'C:\\Program Files'
+    'PROGRAMW6432' => 'C:\\Program Files'
+    'PSMODULEPATH' => 'C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'PWD' => 'c:/wamp/www/advanced'
+    'SESSIONNAME' => 'Console'
+    'SHLVL' => '1'
+    'SYSTEMDRIVE' => 'C:'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'TEMP' => 'C:/Users/user/AppData/Local/Temp'
+    'TERM' => 'cygwin'
+    'TMP' => 'C:/Users/user/AppData/Local/Temp'
+    'USERDOMAIN' => 'ALIENWARE15'
+    'USERDOMAIN_ROAMINGPROFILE' => 'ALIENWARE15'
+    'USERNAME' => 'user'
+    'USERPROFILE' => 'C:\\Users\\user'
+    'WINDIR' => 'C:\\WINDOWS'
+    '_' => 'c:/wamp/bin/php/php5.5.12/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1441542145.2116
+    'REQUEST_TIME' => 1441542145
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
