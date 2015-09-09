@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use yii\bootstrap\Modal;
 
 AppAsset::register($this);
 ?>
@@ -140,4 +141,18 @@ jQuery(document).ready(function() {
 });
 </script>
 </html>
-<?php $this->endPage() ?>
+<?php 
+
+Modal::begin([
+    'header' =>'POS',
+    'id' => 'modal',
+    'size' => 'modal-sm',
+    'clientOptions' => ['backdrop' => 'static', 'keyboard' => FALSE],
+
+]);
+
+echo "<div id='modalContent'></div>";
+Modal::end();
+
+
+$this->endPage() ?>

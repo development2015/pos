@@ -11,19 +11,7 @@ $(function(){
         input.val('');
     }); 
 
-    /*$('.numpad').keydown(function (e) {
-        //alert(e.keyCode);
-        var key = e.keyCode; 
-        //alert(key);
-        if (key == 55) {
-          var a = $('.num7').val();
-          alert(a);
 
-        } else if(key == 49) {
-
-        };
-
-    }); */
     $('#numpad').focus(function(){
       $('.numpad').keydown(function (e) {
         var key = e.keyCode;
@@ -56,8 +44,6 @@ $(function(){
         };
 
       });
-
-
 
     });
 
@@ -124,6 +110,28 @@ $(function(){
         });
 
     });
+
+    $(".pay").click(function(){
+        $.ajax({
+              type: "POST",
+              url: "index.php?r=site%2Fpay",
+              success : function(html){
+                  $("#modalContent").html(html);
+              }
+        });
+    });
+
+
+
+    $('.pay').click(function(){
+        $('#modal').modal('show')
+        .find('#modalContent')
+        .load($(this).attr('value'));
+
+        /* */
+    });
+
+
 
 });
 

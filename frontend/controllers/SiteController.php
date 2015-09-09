@@ -34,7 +34,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index','quantity','barcode'],
+                        'actions' => ['logout', 'index','quantity','barcode','pay'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -110,6 +110,10 @@ class SiteController extends Controller
 
     }
 
+    public function actionPay()
+    {
+        return $this->renderAjax('pay');
+    }
     public function actionLogin()
     {
         if (!\Yii::$app->user->isGuest) {

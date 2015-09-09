@@ -7,6 +7,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\grid\GridView;
+use yii\helpers\Url;
 $this->title = 'POS';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -74,10 +75,12 @@ $this->params['breadcrumbs'][] = $this->title;
                                     </tr>
                                     </thead>
                                     <?php 
-                                     $sum = $sum_quantity = 0;
+                                     $sum = $sum_quantity = 0; 
 
-                                    foreach ($goods as $key => $value) { ?>
+                                    foreach ($goods as $key => $value) {  ?>
                                         <tr>
+                                   
+                        
                                             <td><?php echo $value['items']; ?></td>
                                             <td>
 
@@ -108,6 +111,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                           <td colspan="2"><b>Jumlah</b></td>
                                           <td><b></b></td>
                                           <td><b><?php echo $sum; ?></b></td>
+                              
 
                                         </tr>
                                     </tfoot>
@@ -127,10 +131,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
                             <div class="portlet-body">
                                 
-                                    <input type="text" class="form-control input-lg numpad" id="numpad" readonly="readonly">
+                                <input type="text" class="form-control input-lg numpad" id="numpad" readonly="readonly">
 
-                                  
-                            
                                 <br>
 
                                 <style type="text/css">
@@ -199,7 +201,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                             Cash : 
                                         </div>
                                         <div class="col-md-3 name">
-                                            RM <?php echo $cash = 11100.00; ?>
+                                             RM <span class="cash"></span>
                                         </div>
                                     </div>  
                                     <div class="row static-info">
@@ -207,7 +209,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                             Balance : 
                                         </div>
                                         <div class="col-md-3 value">
-                                            RM <?php echo  $total = $cash - $sum; ?>
+                                            RM <?php echo  $total =  $sum; ?>
                                         </div>
                                     </div>
 
@@ -222,11 +224,10 @@ $this->params['breadcrumbs'][] = $this->title;
                                     height: 100px;
                                 }
 
-    
 
                                 </style>
                                 <button type="button" id="sizelg" class="btn default btn-lg">Etc</button>
-                                <button type="button" id="sizelg" class="btn default btn-lg">Pay</button>
+                                <button type="button" id="sizelg" class="btn default btn-lg pay">Bayar</button>
                                 <button type="button" id="sizelg" class="btn default btn-lg">Print</button>
                                
                             </div>
