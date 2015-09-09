@@ -113,9 +113,9 @@ $(function(){
               type: "POST",
               url: "index.php?r=site%2Fpay",
               data: dataString,
-              /*success : function(html){
+              success : function(html){
                   $("#modalContent").html(html);
-              }*/
+              }
         });
     });
 

@@ -210,7 +210,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                             Balance : 
                                         </div>
                                         <div class="col-md-3 value">
-                                            RM <?php echo  $total =  $sum; ?>
+                                            RM <span class="total"></span>
                                         </div>
                                     </div>
 

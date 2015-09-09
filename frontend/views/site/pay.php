@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<input type="hidden" name="subtotal" class="subtotal" value="<?php echo $sum; ?>">
 <script src="/pos/frontend/web/assets/498b0cb3/jquery.js"></script>
 <script>
 $(document).ready(function(){
@@ -51,8 +51,14 @@ $(document).ready(function(){
     });
 
     $('.proses_modal').on('click', function () {
-        var numpad_modal = $(".numpad_modal").val();
-        $('span.cash').html(numpad_modal);
+        var cash = $(".numpad_modal").val();
+        var subtotal = $(".subtotal").val();
+
+
+        var sum = cash - subtotal;
+
+        $('span.cash').html(cash);
+        $('span.total').html((sum).toFixed(2));
 
     }); 
 
@@ -60,6 +66,7 @@ $(document).ready(function(){
 
 });
 </script>
+
 
 
 <div class="portlet-body">

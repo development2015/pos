@@ -112,8 +112,8 @@ class SiteController extends Controller
 
     public function actionPay()
     {
-        echo $sum = $_POST['sum'];
-        //return $this->renderAjax('pay');
+        $sum = $_POST['sum'];
+        return $this->renderAjax('pay',['sum'=>$sum]);
     }
     public function actionLogin()
     {
